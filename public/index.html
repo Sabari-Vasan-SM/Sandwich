@@ -2,69 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sandwich File Upload</title>
+  <title>Sandwich Upload</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Verdana', sans-serif;
-    }
-
     body {
-      background: linear-gradient(to right, #f9f9f9, #ffeaa7);
-      height: 100vh;
+      margin: 0;
+      font-family: Verdana, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      background: #ffeaa7;
     }
 
-    .upload-container {
-      background-color: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
+      max-width: 350px;
       width: 100%;
-      max-width: 400px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      color: #2d3436;
     }
 
     input[type="file"] {
-      margin-bottom: 20px;
-      display: block;
+      margin: 20px 0;
       width: 100%;
     }
 
     button {
-      background-color: #6c5ce7;
-      color: white;
+      background: #6c5ce7;
+      color: #fff;
       border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 6px;
+      padding: 10px 16px;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #5a4cc4;
-    }
-
-    .success-message {
-      margin-top: 20px;
-      color: green;
+      background: #5a4cc4;
     }
   </style>
 </head>
 <body>
-  <div class="upload-container">
-    <h1>🥪 Upload Your Sandwich File</h1>
-
+  <div class="container">
+    <h2>🥪 Upload File</h2>
     <form action="/upload" method="post" enctype="multipart/form-data">
       <input type="file" name="file" required />
       <button type="submit">Upload</button>
